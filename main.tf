@@ -18,5 +18,3 @@ resource "azurerm_management_lock" "this" {
   name       = coalesce(var.lock.name, "lock-${var.name}")
   scope      = azurerm_public_ip_prefix.this.id
 }
-
-
