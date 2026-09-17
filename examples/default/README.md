@@ -68,7 +68,7 @@ module "test" {
   name                = module.naming.public_ip_prefix.name_unique
   prefix_length       = var.prefix_length # see variables.tf
   resource_group_name = azurerm_resource_group.this.name
-  enable_telemetry    = var.enable_telemetry  # see variables.tf
+  enable_telemetry    = false                 # see variables.tf
   lock                = { kind = "ReadOnly" } # see variables.tf
   tags                = var.tags
   zones               = var.zones
