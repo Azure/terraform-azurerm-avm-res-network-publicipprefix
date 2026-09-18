@@ -68,7 +68,7 @@ module "test" {
   name                = module.naming.public_ip_prefix.name_unique
   prefix_length       = var.prefix_length # see variables.tf
   resource_group_name = azurerm_resource_group.this.name
-  enable_telemetry    = false                 # see variables.tf
+  enable_telemetry    = var.enable_telemetry  # see variables.tf
   lock                = { kind = "ReadOnly" } # see variables.tf
   tags                = var.tags
   zones               = var.zones
@@ -110,7 +110,7 @@ If it is set to false, then no telemetry will be collected.
 
 Type: `bool`
 
-Default: `true`
+Default: `false`
 
 ### <a name="input_prefix_length"></a> [prefix\_length](#input\_prefix\_length)
 
